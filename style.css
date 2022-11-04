@@ -1,0 +1,31 @@
+h1{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color:turquoise;
+font-weight: bold;
+font-size: 1.5rem;
+}
+
+body {
+    background-image: url("bg1.jpg")
+  }
+  
+.hide {
+    display: none;
+}
+
+form{
+    border-style: none;
+    box-shadow: none;
+    padding: 1.5rem
+}
+input{
+    border-style: none
+}
+
+li{
+    color:turquoise
+}
+
+span{
+    color: turquoise
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#000000 ">
+        <meta name="description" content="this is a momentumdash clone made by Chris with Nico">
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Vanilla JS</title>
+    </head>
+    <body>
+        <!-- 실시간 시계
+    로컬 스토리지를 사용한 로그인
+    로컬 스토리지를 사용한 투두리스트
+    랜덤 배경 이미지
+    날씨와 위치 (geolocation)
+    여러분의 CSS 실력을 뽐내주세요💖 -->
+        <h1 id="clock"> clock will be here</h1>
+        <form class="hide" id="loginForm" onsubmit="onLoginSubmit(event)">
+            <input id="loginInput" class="" placeholder="type your name">
+            <button id="loginButton" class=""> Sign in!</button>
+        </form>
+        <h1 id="greeting" class="hide"> Hello, {name}</h1>
+        <form id="todoForm" onsubmit="handleTodoSubmit(event)">
+            <input required id="todoInput" placeholder="type your todos">
+            <button id="todoButton"> Add</button>
+        </form>
+        <ol id="todoList"></ol>
+        <button id="bgChange" onclick="bgChange()"> change background</button>
+        <span id="weather">Loading...</span>
+        <span id="timezone"></span>
+        <div id="root"></div>
+        <script src="clock.js"></script>
+        <script src="todo.js"></script>
+        <script src="login.js"></script>
+        <script src="weather.js"></script>
+        <script src="bgchange.js"></script>
+    </body>
+</html>
