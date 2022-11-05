@@ -15,7 +15,7 @@ if (todoInLocalStorage !== null) {
 }
 
 function renderTodo(todoInArray) {
-  console.log("tdiary", todoInArray);
+  console.log("todoInArray", todoInArray);
   const generatedLi = document.createElement("li");
   generatedLi.id = todoInArray.id;
 

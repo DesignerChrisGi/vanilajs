@@ -6,6 +6,7 @@
         <meta name="theme-color" content="#000000 ">
         <meta name="description" content="this is a momentumdash clone made by Chris with Nico">
         <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="style.css">
         <title>Vanilla JS</title>
     </head>
@@ -16,21 +17,35 @@
     랜덤 배경 이미지
     날씨와 위치 (geolocation)
     여러분의 CSS 실력을 뽐내주세요💖 -->
-        <h1 id="clock"> clock will be here</h1>
-        <form class="hide" id="loginForm" onsubmit="onLoginSubmit(event)">
-            <input id="loginInput" class="" placeholder="type your name">
-            <button id="loginButton" class=""> Sign in!</button>
-        </form>
-        <h1 id="greeting" class="hide"> Hello, {name}</h1>
-        <form id="todoForm" onsubmit="handleTodoSubmit(event)">
-            <input required id="todoInput" placeholder="type your todos">
-            <button id="todoButton"> Add</button>
-        </form>
-        <ol id="todoList"></ol>
-        <button id="bgChange" onclick="bgChange()"> change background</button>
-        <span id="weather">Loading...</span>
-        <span id="timezone"></span>
-        <div id="root"></div>
+        <div id="container">
+            <div id="one" class="hide">
+                <div id="header">
+                    <div></div>
+                    <h1 id="greeting" class=""> Hello, {name}</h1>
+                    <button id="signout" onclick="signout()">sign out</button>
+                </div>
+                </br>
+                <span id="clock" class=""> 00:00:00</span>
+            </div>
+            <form class="hide" id="loginForm" onsubmit="onLoginSubmit(event)">
+                <input id="loginInput" class="" placeholder="type your name">
+                <Button id="loginButton" class=""> Sign in!</Button>
+            </form>
+            <form class="hide" id="todoForm" onsubmit="handleTodoSubmit(event)">
+                <input required id="todoInput" placeholder="type your todos">
+                <Button id="todoButton"> Add</Button>
+            </form>
+            <div id="two" class="hide">
+                <ol class="" id="todoList"></ol>
+                <span class="" id="weather">Loading...</span>
+                </br>
+                <span class="" id="timezone"></span>
+                </br>
+                </br>
+                <Button class="" id="bgChange" onclick="bgChange()"> Magic?</Button>
+            </div>
+            <div id="root"></div>
+        </div>
         <script src="clock.js"></script>
         <script src="todo.js"></script>
         <script src="login.js"></script>

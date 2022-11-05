@@ -1,13 +1,37 @@
-h1{
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-color:turquoise;
-font-weight: bold;
-font-size: 1.5rem;
+#container{
+    display:flex;
+    flex-direction:column
 }
 
+#greeting {
+color:turquoise;
+font-weight: normal;
+font-size: 1.5rem;
+font-family:"fantasy";
+}
+
+#signout{
+    
+}
+
+#clock{
+font-size: 10rem; 
+color:turquoise
+
+}
+#one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 body {
-    background-image: url("bg1.jpg")
-  }
+    background-image: url("bg1.jpg");
+    background-blend-mode:normal;
+    background-size: cover;
+    background-position: center;    
+}
   
 .hide {
     display: none;
@@ -16,10 +40,16 @@ body {
 form{
     border-style: none;
     box-shadow: none;
-    padding: 1.5rem
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:15rem
 }
 input{
-    border-style: none
+    border-style: none;
+    align-items: center;
+    justify-content: center;
 }
 
 li{
@@ -27,5 +57,24 @@ li{
 }
 
 span{
-    color: turquoise
+    color: turquoise;
+ 
+    
+}
+
+button{
+    border: 0px;
+    margin: 0ch;
+    padding:0.2rem;
+    
+    color:#d68aff;
+    background-color: transparent;
+    outline-style:ridge;
+    font-weight:300
+}
+
+#header{
+    display: flex;
+    
+
 }

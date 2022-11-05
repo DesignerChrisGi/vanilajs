@@ -11,11 +11,19 @@ if (nameInLocalStorage === null) {
   loginForm.className = " ";
 } else {
   greetingMessage(nameInLocalStorage);
+  loginForm.className = STEALTH_MODE;
+  one.className = " ";
+  two.className = " ";
+  todoForm.className = " ";
 }
 
 function onLoginSubmit(event) {
   event.preventDefault();
   loginForm.className = STEALTH_MODE;
+  one.className = " ";
+  two.className = " ";
+  todoForm.className = " ";
+
   const value_username = event.target[0].value;
   localStorage.setItem(LOCAL_KEY_NAME, value_username);
   greetingMessage(value_username);
@@ -24,4 +32,13 @@ function onLoginSubmit(event) {
 function greetingMessage(name) {
   greeting.innerText = `안녕하세요, ${name} 님`;
   greeting.className = " ";
+}
+
+function signout() {
+  localStorage.removeItem(LOCAL_KEY_NAME);
+  loginForm.className = " ";
+  loginInput.value = null;
+  one.className = "hide";
+  two.className = "hide";
+  todoForm.className = "hide";
 }
