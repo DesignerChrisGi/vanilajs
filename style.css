@@ -1,77 +1,99 @@
-#container{
-    display:flex;
-    flex-direction:column
-}
+/* 1. 콘텐츠 정렬
+2. 버튼 정렬
+3. 사이즈 반응
+4. 배경 블렌드(가독성)
+5. 폰트 
+6. 
 
-#greeting {
-color:turquoise;
-font-weight: normal;
-font-size: 1.5rem;
-font-family:"fantasy";
-}
-
-
-#clock{
-font-size: 10rem; 
-color:turquoise
-
-}
-/* #one{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
+ */
 
 body {
     background-image: url("bg1.jpg");
-    background-blend-mode:normal;
-    background-size: cover;
-    background-position: center;    
 }
-  
+
+#header {
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 4rem;
+}
+
+#greeting {
+    color: #f88c8cba;
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-family: "fantasy";
+}
+
+
+#clock {
+    font-size: 15rem;
+    color: #fd8e8e;
+    text-align: center;
+}
+
+#formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+form {
+    border-style: none;
+    box-shadow: none;
+    padding: 1.5rem;
+    align-items: center;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    border-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+#footer {
+    display: flex;
+    align-items: end;
+
+    flex-direction: column;
+    margin: 0 4rem
+}
+
+
 .hide {
     display: none;
 }
 
-form{
-    border-style: none;
-    box-shadow: none;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:15rem
-}
-input{
-    border-style: none;
-    align-items: center;
-    justify-content: center;
-}
-
-li{
-    color:turquoise
-}
-
-span{
+li {
     color: turquoise;
- 
-    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0 10rem;
 }
 
-button{
+span {
+    color: #f88c8cba;
+}
+
+button {
     border: 0px;
     margin: 0ch;
-    padding:0.2rem;
-    
-    color:#d68aff;
+    padding: 0.2rem;
+    color: #fd8e8e;
     background-color: transparent;
-    outline-style:ridge;
-    font-weight:300
+    outline-style: dotted;
+    font-weight: 200;
+    margin-right: 2rem;
+
 }
 
-#header{
+.align-center {
     display: flex;
-
-
+    flex-direction: row;
 }

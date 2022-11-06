@@ -1,6 +1,9 @@
 const loginInput = document.querySelector("#loginInput");
 const loginForm = document.querySelector("#loginForm");
 const greeting = document.querySelector("#greeting");
+const header = document.querySelector("#header");
+const footer = document.querySelector("#footer");
+const listContainer = document.querySelector("#listContainer");
 
 const STEALTH_MODE = "hide";
 const LOCAL_KEY_NAME = "name";
@@ -12,16 +15,18 @@ if (nameInLocalStorage === null) {
 } else {
   greetingMessage(nameInLocalStorage);
   loginForm.className = STEALTH_MODE;
-  one.className = " ";
-  two.className = " ";
+  header.classList.add("align-center");
+  listContainer.classList.remove("hide");
+  footer.classList.remove("hide");
   todoForm.className = " ";
 }
 
 function onLoginSubmit(event) {
   event.preventDefault();
   loginForm.className = STEALTH_MODE;
-  one.className = " ";
-  two.className = " ";
+  header.classList.add("align-center");
+  listContainer.classList.remove("hide");
+  footer.classList.remove("hide");
   todoForm.className = " ";
 
   const value_username = event.target[0].value;
@@ -38,7 +43,8 @@ function signout() {
   localStorage.removeItem(LOCAL_KEY_NAME);
   loginForm.className = " ";
   loginInput.value = null;
-  one.className = "hide";
-  two.className = "hide";
-  todoForm.className = "hide";
+  header.classList.add("hide");
+  listContainer.classList.add("hide");
+  footer.classList.add("hide");
+  todoForm.classList.add("hide");
 }
