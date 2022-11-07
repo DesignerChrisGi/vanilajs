@@ -12,6 +12,10 @@ const nameInLocalStorage = localStorage.getItem(LOCAL_KEY_NAME);
 
 if (nameInLocalStorage === null) {
   loginForm.className = " ";
+  header.classList.add("hide");
+  listContainer.classList.add("hide");
+  footer.classList.add("hide");
+  todoForm.className = "hide";
 } else {
   greetingMessage(nameInLocalStorage);
   loginForm.className = STEALTH_MODE;
@@ -43,8 +47,5 @@ function signout() {
   localStorage.removeItem(LOCAL_KEY_NAME);
   loginForm.className = " ";
   loginInput.value = null;
-  header.classList.add("hide");
-  listContainer.classList.add("hide");
-  footer.classList.add("hide");
-  todoForm.classList.add("hide");
+  location.reload();
 }
